@@ -7,11 +7,13 @@
 <template>
     <div id="nav">
         <img src='../assets/img/logoP.svg' alt="logo">
-        <div class="social-icon">
-            <a href="https://www.linkedin.com/in/carlos-damian-cano-lopez-399812260/" style='textDecoration: none color: white'><img src="../assets/img/nav-icon1.svg" alt="Icon"/></a>
-            <a href="https://github.com/DamianCanoLopez" style='textDecoration: none color: white'><img id='git' src="../assets/img/nav-icon4.svg" alt="Icon"/></a>
-            <a href="https://damiancanolopez.vercel.app/" style='textDecoration: none color: white'><img src="../assets/img/nav-icon5.svg" alt="Icon"/></a>
-        </div>
+        <span class="navbar-text">
+            <div class="social-icon">
+                <a href="https://www.linkedin.com/in/carlos-damian-cano-lopez-399812260/" style='textDecoration: none color: white' target="_blank"><img src="../assets/img/nav-icon1.svg" alt="Icon"/></a>
+                <a href="https://github.com/DamianCanoLopez" style='textDecoration: none color: white' target="_blank"><img src="../assets/img/nav-icon4.svg"/></a>
+                <a href="https://damiancanolopez.vercel.app/" style='textDecoration: none color: white' target="_blank"><img src="../assets/img/nav-icon5.svg" alt="Icon"/></a>
+            </div>
+        </span>
     </div>
 </template>
 
@@ -25,6 +27,16 @@
     padding: 3%;
 }
 
+span.navbar-text {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-left: 14px;
+}
+
 .social-icon a {
     width: 42px;
     height: 42px;
@@ -36,12 +48,31 @@
     justify-content: center;
     line-height: 1;
     border: 1px solid rgba(255, 255, 255, 0.5);
-
-    
 }
 
-.social-icon #git{
-    background-image: url(../assets/img/nav-icon4.svg);
-    background-size: cover;
+
+.social-icon a::before {
+    content: "";
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transform: scale(0);
+	transition: 0.3s ease-in-out;
 }
+.social-icon a:hover::before {
+    transform: scale(1);
+}
+.social-icon a img {
+	width: 40%;
+	z-index: 1;
+	transition: 0.3s ease-in-out;
+}
+.social-icon a:hover img {
+	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+
+
+
 </style>

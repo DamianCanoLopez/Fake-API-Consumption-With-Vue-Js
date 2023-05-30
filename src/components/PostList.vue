@@ -77,6 +77,8 @@ export default{
 #container{
   display: flex;
   flex-wrap: wrap;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .cart{
@@ -84,5 +86,13 @@ export default{
   margin: 10px;
   border: 1px solid #ccc;
   padding: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart:hover{
+  box-shadow: 3px 7px 10px -2px rgb(149, 50, 211);
 }
 </style>

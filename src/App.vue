@@ -1,6 +1,7 @@
 <script setup>
 import PostList from './components/PostList.vue'
 import NavBart from './components/NavBart.vue';
+import NavFooter from './components/NavFooter.vue';
 </script>
 
 <template>
@@ -12,24 +13,12 @@ import NavBart from './components/NavBart.vue';
       <PostList />
   </main>
 
+  <footer>
+    <NavFooter/>
+  </footer>
+
 </template>
 
 <style scoped>
 
-
-
-@media (min-width: 1024px) {
-  /* header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  } */
-
-
-  /* header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  } */
-}
 </style>
