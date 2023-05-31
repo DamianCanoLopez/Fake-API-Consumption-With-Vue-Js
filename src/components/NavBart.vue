@@ -73,6 +73,25 @@ span.navbar-text {
 	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  #nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 3% 0;
+  }
 
+  .social-icon {
+    margin-top: 10px;
+  }
+}
 
+/* Estilos para pantallas de 769px a 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 3% 0;
+  }
+}
 </style>

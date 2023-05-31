@@ -95,4 +95,25 @@ export default{
 .cart:hover{
   box-shadow: 3px 7px 10px -2px rgb(149, 50, 211);
 }
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .cart {
+    width: calc(50% - 20px);
+  }
+}
+
+/* Estilos para pantallas aún más pequeñas */
+@media screen and (max-width: 576px) {
+  .cart {
+    width: calc(100% - 20px);
+  }
+}
+
+/* Estilos para pantallas de 769px a 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .cart {
+    width: calc(25% - 20px);
+  }
+}
 </style>
